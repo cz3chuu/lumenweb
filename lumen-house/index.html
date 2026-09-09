@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lumen House, dom w Beskidach zbudowany wokół jednego okna</title>
 <meta name="description" content="Prywatny dom w Beskidach, w którym światło jest materiałem budowlanym. Beton, modrzew, kamień i jedno okno na całą wysokość. Umów prywatną prezentację o wschodzie słońca.">
-<meta name="theme-color" content="#11161A">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2311161A'/%3E%3Cpath d='M9 6v20h14' fill='none' stroke='%23F0E4CE' stroke-width='2.2'/%3E%3Ccircle cx='23' cy='9' r='2.6' fill='%23F0E4CE'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0D1219">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D1219'/%3E%3Cpath d='M9 6v20h14' fill='none' stroke='%23F2E3C6' stroke-width='2.2'/%3E%3Ccircle cx='23' cy='9' r='2.6' fill='%23F2E3C6'/%3E%3C/svg%3E">
 
 <!-- DEPLOY STEP: patch og:url and og:image with the live absolute URL before zipping -->
 <meta property="og:type" content="website">
@@ -24,16 +24,16 @@
    TOKENS
    ============================================================ */
 :root{
-  --canvas:#11161A;
-  --canvas-deep:#0C1013;
-  --panel:#171E23;
-  --accent:#F0E4CE;
-  --accent-hover:#FFF6E6;
-  --accent-muted:rgba(240,228,206,.18);
-  --text-primary:#DDE3E2;
-  --text-secondary:#8D9A9C;
-  --line:rgba(221,227,226,.14);
-  --line-strong:rgba(221,227,226,.42);
+  --canvas:#0D1219;
+  --canvas-deep:#090D12;
+  --panel:#141B24;
+  --accent:#F2E3C6;
+  --accent-hover:#FFF4DC;
+  --accent-muted:rgba(242,227,198,.18);
+  --text-primary:#DCE3EA;
+  --text-secondary:#93A3B4;
+  --line:rgba(220,227,234,.14);
+  --line-strong:rgba(220,227,234,.42);
 
   --display:'Fraunces',Georgia,'Times New Roman',serif;
   --body:'Manrope',system-ui,sans-serif;
@@ -95,8 +95,8 @@ a{color:inherit}
 .env{position:fixed;inset:0;z-index:0;pointer-events:none}
 .env__glow{
   position:absolute;inset:-20%;
-  background:radial-gradient(ellipse 60% 50% at 68% 22%,rgba(240,228,206,.055),transparent 62%),
-             radial-gradient(ellipse 70% 60% at 12% 82%,rgba(141,154,156,.05),transparent 66%);
+  background:radial-gradient(ellipse 60% 50% at 68% 22%,rgba(242,227,198,.055),transparent 62%),
+             radial-gradient(ellipse 70% 60% at 12% 82%,rgba(110,150,188,.05),transparent 66%);
   animation:envdrift 96s var(--ease-soft) -22s infinite alternate;
 }
 .env__grain{
@@ -147,7 +147,7 @@ a{color:inherit}
   stroke-dasharray:var(--arclen,1000);
   stroke-dashoffset:calc(var(--arclen,1000) * (1 - var(--sun)));
 }
-.suntrack__dot{fill:var(--accent);filter:drop-shadow(0 0 7px rgba(240,228,206,.6))}
+.suntrack__dot{fill:var(--accent);filter:drop-shadow(0 0 7px rgba(242,227,198,.6))}
 .suntrack__label{
   font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
   fill:var(--text-secondary);
@@ -157,7 +157,7 @@ a{color:inherit}
 /* ============================================================
    HERO: pinned scroll stage
    ============================================================ */
-.hero{position:relative;height:700vh;z-index:2}
+.hero{position:relative;height:1000vh;z-index:2}
 /* 700vh is the right length while a film is playing under it. With no film it is seven
    screens of a motionless frame before the first section, so the journey is compressed
    to four readable beats over the still. */
@@ -240,7 +240,7 @@ a{color:inherit}
 /* The settle sits on the brightest footage of the whole shot, so it carries the deepest scrim. */
 .band--4::before{
   inset:-18% -12%;
-  background:radial-gradient(ellipse 72% 64% at 40% 50%,rgba(5,7,10,.68) 0%,rgba(5,7,10,.5) 48%,rgba(5,7,10,0) 80%);
+  background:radial-gradient(ellipse 72% 64% at 40% 50%,rgba(5,7,10,.72) 0%,rgba(5,7,10,.56) 50%,rgba(5,7,10,0) 82%);
 }
 
 .band h2,.band .h2{
@@ -542,7 +542,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 
 <nav class="nav" id="nav">
   <a class="nav__mark" href="#top">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 6v20h14" fill="none" stroke="#F0E4CE" stroke-width="2.4"/><circle cx="23" cy="9" r="2.8" fill="#F0E4CE"/></svg>
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 6v20h14" fill="none" stroke="#F2E3C6" stroke-width="2.4"/><circle cx="23" cy="9" r="2.8" fill="#F2E3C6"/></svg>
     Lumen House
   </a>
   <div class="nav__links">
@@ -581,21 +581,21 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
     <div class="bands" id="bands">
       <div class="band band--1" data-band="0,0.22" data-ramp="0.034">
         <h2 class="fx-blur" data-split="none">
-          <span class="sr">O piątej dom jest jeszcze kamieniem.</span>
-          <span class="soft" aria-hidden="true">O piątej dom jest jeszcze kamieniem.</span>
-          <span class="sharp" aria-hidden="true">O piątej dom jest jeszcze kamieniem.</span>
+          <span class="sr">Cały dzień dom zbiera światło.</span>
+          <span class="soft" aria-hidden="true">Cały dzień dom zbiera światło.</span>
+          <span class="sharp" aria-hidden="true">Cały dzień dom zbiera światło.</span>
         </h2>
       </div>
 
       <div class="band band--2" data-band="0.26,0.48">
-        <h2 class="fx-depth" data-split="none">Potem wchodzi światło.</h2>
+        <h2 class="fx-depth" data-split="none">Wieczorem oddaje je z powrotem.</h2>
       </div>
 
-      <div class="band band--3" data-band="0.52,0.72" data-spread="0.55">
-        <h2 class="fx-sweep" data-split="chars">I dom zmienia materiał.</h2>
+      <div class="band band--3" data-band="0.52,0.74" data-spread="0.55">
+        <h2 class="fx-sweep" data-split="chars">Dalej jest już tylko dolina.</h2>
       </div>
 
-      <div class="band band--4" data-band="0.78,1">
+      <div class="band band--4" data-band="0.80,1">
         <p class="kicker band__kick">Dom prywatny / Beskidy</p>
         <p class="h2 fx-rise" data-split="words">Lumen House</p>
         <p class="band__sub">Dom w Beskidach, zbudowany wokół jednego okna.</p>
@@ -660,20 +660,20 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
         <svg class="day__svg" id="daySvg" viewBox="0 0 1200 460" role="img" aria-label="Przekrój pokoju: słońce wędruje po niebie, a smuga światła przesuwa się po podłodze i sięga tylnej ściany o poranku">
           <defs>
             <linearGradient id="beam" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#F0E4CE" stop-opacity=".42"/>
-              <stop offset="62%" stop-color="#F0E4CE" stop-opacity=".16"/>
-              <stop offset="100%" stop-color="#F0E4CE" stop-opacity=".04"/>
+              <stop offset="0%" stop-color="#F2E3C6" stop-opacity=".42"/>
+              <stop offset="62%" stop-color="#F2E3C6" stop-opacity=".16"/>
+              <stop offset="100%" stop-color="#F2E3C6" stop-opacity=".04"/>
             </linearGradient>
             <clipPath id="roomclip"><rect x="114" y="90" width="562" height="300"/></clipPath>
           </defs>
 
           <!-- outside: ridge and ground -->
           <path d="M700 414 V392 L790 344 L880 372 L985 322 L1090 358 L1200 330 V414 Z"
-                fill="#8D9A9C" fill-opacity=".12"/>
+                fill="#93A3B4" fill-opacity=".12"/>
 
           <!-- the sun's path across the sky -->
           <path id="sunArc" d="M1168 330 Q 950 60 726 300" fill="none"
-                stroke="#8D9A9C" stroke-opacity=".26" stroke-width="1" stroke-dasharray="3 8"/>
+                stroke="#93A3B4" stroke-opacity=".26" stroke-width="1" stroke-dasharray="3 8"/>
 
           <!-- the light inside the room -->
           <g clip-path="url(#roomclip)">
@@ -681,7 +681,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
           </g>
 
           <!-- concrete shell: floor, ceiling, back wall, window wall -->
-          <g fill="#8D9A9C" fill-opacity=".2">
+          <g fill="#93A3B4" fill-opacity=".2">
             <rect x="90" y="390" width="610" height="24"/>
             <rect x="90" y="66"  width="610" height="24"/>
             <rect x="90" y="66"  width="24"  height="348"/>
@@ -690,18 +690,18 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
             <rect x="700" y="116" width="78" height="15"/>
           </g>
           <!-- form lines in the concrete -->
-          <g stroke="#8D9A9C" stroke-opacity=".22" stroke-width="1">
+          <g stroke="#93A3B4" stroke-opacity=".22" stroke-width="1">
             <path d="M90 156 H114"/><path d="M90 222 H114"/><path d="M90 288 H114"/><path d="M90 354 H114"/>
           </g>
           <!-- the glass -->
-          <rect x="676" y="150" width="24" height="210" fill="#F0E4CE" fill-opacity=".1"/>
-          <path d="M688 150 V360" stroke="#F0E4CE" stroke-opacity=".5" stroke-width="1.4"/>
+          <rect x="676" y="150" width="24" height="210" fill="#F2E3C6" fill-opacity=".1"/>
+          <path d="M688 150 V360" stroke="#F2E3C6" stroke-opacity=".5" stroke-width="1.4"/>
 
-          <text x="739" y="106" text-anchor="middle" fill="#8D9A9C" fill-opacity=".8"
+          <text x="739" y="106" text-anchor="middle" fill="#93A3B4" fill-opacity=".8"
                 font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.4">OKAP</text>
 
-          <circle id="sunDot" cx="1168" cy="330" r="8" fill="#F0E4CE"/>
-          <text id="sunTime" x="1168" y="362" text-anchor="middle" fill="#8D9A9C"
+          <circle id="sunDot" cx="1168" cy="330" r="8" fill="#F2E3C6"/>
+          <text id="sunTime" x="1168" y="362" text-anchor="middle" fill="#93A3B4"
                 font-family="IBM Plex Mono, monospace" font-size="15" letter-spacing="1.5">7:00</text>
         </svg>
       </div>
@@ -813,8 +813,8 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
     <div class="cta__veil" aria-hidden="true"></div>
     <div class="sec__inner cta__inner">
       <p class="kicker rise">06 / Wizyta</p>
-      <h2 class="rise">Zobacz go o poranku.</h2>
-      <p class="lede rise">Prezentacje umawiamy na wschód słońca, bo wtedy dom pokazuje, o co w nim chodzi.</p>
+      <h2 class="rise">Zobacz go o zmierzchu.</h2>
+      <p class="lede rise">Prezentacje umawiamy pod wieczór, bo wtedy dom pokazuje, o co w nim chodzi.</p>
 
       <form class="form rise" id="visitForm" novalidate>
         <div class="form__fields">
@@ -834,7 +834,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
           </div>
           <div class="field">
             <label for="f-when">Kiedy chcesz przyjechać?</label>
-            <input id="f-when" name="when" type="text" placeholder="Sobota rano, początek października">
+            <input id="f-when" name="when" type="text" placeholder="Sobota wieczorem, początek października">
           </div>
           <button class="btn btn--solid" type="submit">Umów prywatną prezentację</button>
           <p class="form__note">To projekt pokazowy. Formularz nie wysyła wiadomości.</p>
@@ -866,7 +866,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
    CONSTANTS
    ============================================================ */
 var VIDEO_URL   = 'assets/hero-scrub.mp4';
-var VIDEO_BYTES = 5837574;                 /* the real encoded size: the fallback when Content-Length is missing */
+var VIDEO_BYTES = 2984426;                 /* the real encoded size: the fallback when Content-Length is missing */
 var POSTER_URL  = 'assets/hero-poster.jpg';
 var ENDING_URL  = 'assets/hero-ending.jpg';
 
