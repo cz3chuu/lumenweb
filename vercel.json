@@ -1,0 +1,15 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": "lumen-house",
+  "rewrites": [
+    {
+      "source": "/lumen-house",
+      "destination": "/"
+    },
+    {
+      "source": "/lumen-house/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
